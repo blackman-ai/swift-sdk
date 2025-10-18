@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "BlackmanClient",
             dependencies: ["Alamofire"],
-            path: "Sources"
+            path: "BlackmanClient/Classes"
         )
     ]
 )
