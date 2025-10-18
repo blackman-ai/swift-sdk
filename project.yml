@@ -1,0 +1,15 @@
+name: BlackmanClient
+targets:
+  BlackmanClient:
+    type: framework
+    platform: iOS
+    deploymentTarget: "11.0"
+    sources: [BlackmanClient]
+    info:
+      path: ./Info.plist
+      version: 0.0.5
+    settings:
+      APPLICATION_EXTENSION_API_ONLY: true
+    scheme: {}
+    dependencies:
+    - carthage: AnyCodable
