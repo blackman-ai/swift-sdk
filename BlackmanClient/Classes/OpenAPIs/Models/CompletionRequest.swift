@@ -24,16 +24,19 @@ public struct CompletionRequest: Codable, JSONEncodable, Hashable {
     public var temperature: Float?
     public var topP: Float?
     public var messages: [Message]
+    /** Optional metadata for tracking, analytics, and conditional processing. Can include session IDs, user context, feature flags, or any custom data. This metadata is logged with the request and can be used for filtering/analysis. */
+    public var metadata: AnyCodable?
     public var model: String
     public var provider: Provider
 
-    public init(maxTokens: Int? = nil, stop: [String]? = nil, stream: Bool? = nil, temperature: Float? = nil, topP: Float? = nil, messages: [Message], model: String, provider: Provider) {
+    public init(maxTokens: Int? = nil, stop: [String]? = nil, stream: Bool? = nil, temperature: Float? = nil, topP: Float? = nil, messages: [Message], metadata: AnyCodable? = nil, model: String, provider: Provider) {
         self.maxTokens = maxTokens
         self.stop = stop
         self.stream = stream
         self.temperature = temperature
         self.topP = topP
         self.messages = messages
+        self.metadata = metadata
         self.model = model
         self.provider = provider
     }
@@ -45,6 +48,7 @@ public struct CompletionRequest: Codable, JSONEncodable, Hashable {
         case temperature
         case topP = "top_p"
         case messages
+        case metadata
         case model
         case provider
     }
@@ -59,6 +63,7 @@ public struct CompletionRequest: Codable, JSONEncodable, Hashable {
         try container.encodeIfPresent(temperature, forKey: .temperature)
         try container.encodeIfPresent(topP, forKey: .topP)
         try container.encode(messages, forKey: .messages)
+        try container.encodeIfPresent(metadata, forKey: .metadata)
         try container.encode(model, forKey: .model)
         try container.encode(provider, forKey: .provider)
     }
