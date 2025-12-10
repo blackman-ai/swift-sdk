@@ -1,10 +1,11 @@
-# Message
+# ContentPart
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**MessageContent**](MessageContent.md) |  | 
-**role** | **String** | \&quot;user\&quot;, \&quot;assistant\&quot;, \&quot;system\&quot; | 
+**text** | **String** |  | 
+**type** | **String** |  | 
+**imageUrl** | [**ImageUrl**](ImageUrl.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

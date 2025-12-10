@@ -21,14 +21,14 @@ Add to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/blackman-ai/swift-sdk.git", from: "0.0.9")
+    .package(url: "https://github.com/blackman-ai/swift-sdk.git", from: "0.0.10")
 ]
 ```
 
 Or in Xcode:
 1. File → Add Package Dependencies
 2. Enter: `https://github.com/blackman-ai/swift-sdk.git`
-3. Select version: `0.0.9`
+3. Select version: `0.0.10`
 
 ## Quick Start
 

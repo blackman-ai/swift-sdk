@@ -17,11 +17,11 @@ extension BlackmanClientAPI {
 
 public struct Message: Codable, JSONEncodable, Hashable {
 
-    public var content: String
+    public var content: MessageContent
     /** \"user\", \"assistant\", \"system\" */
     public var role: String
 
-    public init(content: String, role: String) {
+    public init(content: MessageContent, role: String) {
         self.content = content
         self.role = role
     }

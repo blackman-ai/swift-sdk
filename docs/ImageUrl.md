@@ -1,10 +1,10 @@
-# Message
+# ImageUrl
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | [**MessageContent**](MessageContent.md) |  | 
-**role** | **String** | \&quot;user\&quot;, \&quot;assistant\&quot;, \&quot;system\&quot; | 
+**detail** | **String** | Optional detail level: \&quot;auto\&quot;, \&quot;low\&quot;, or \&quot;high\&quot; | [optional] 
+**url** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

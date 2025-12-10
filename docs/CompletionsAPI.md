@@ -19,7 +19,7 @@ Method | HTTP request | Description
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
 import BlackmanClient
 
-let completionRequest = CompletionRequest(maxTokens: 123, stop: ["stop_example"], stream: false, temperature: 123, topP: 123, messages: [Message(content: "content_example", role: "role_example")], metadata: 123, model: "model_example", provider: Provider()) // CompletionRequest | 
+let completionRequest = CompletionRequest(maxTokens: 123, stop: ["stop_example"], stream: false, temperature: 123, topP: 123, messages: [Message(content: MessageContent(), role: "role_example")], metadata: 123, model: "model_example", provider: Provider()) // CompletionRequest | 
 let xProviderApiKey = "xProviderApiKey_example" // String | Optional provider API key to override stored or system keys (optional)
 
 CompletionsAPI.completions(completionRequest: completionRequest, xProviderApiKey: xProviderApiKey) { (response, error) in
